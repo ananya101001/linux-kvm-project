@@ -1,0 +1,37 @@
+!<thin>
+//                                              210       `
+efi.o/
+vars.o/
+reboot.o/
+memattr.o/
+tpm.o/
+memmap.o/
+capsule.o/
+esrt.o/
+cper.o/
+cper_cxl.o/
+runtime-wrappers.o/
+dev-path-parser.o/
+apple-properties.o/
+sysfb_efi.o/
+earlycon.o/
+cper-x86.o/
+unaccepted_memory.o/
+
+/0              0           0     0     644     36736     `
+/7              0           0     0     644     9528      `
+/15             0           0     0     644     4448      `
+/25             0           0     0     644     6136      `
+/36             0           0     0     644     4856      `
+/43             0           0     0     644     5352      `
+/53             0           0     0     644     7296      `
+/64             0           0     0     644     17064     `
+/72             0           0     0     644     24992     `
+/80             0           0     0     644     5320      `
+/92             0           0     0     644     18664     `
+/112            0           0     0     644     3912      `
+/131            0           0     0     644     7816      `
+/151            0           0     0     644     25992     `
+/164            0           0     0     644     10024     `
+/176            0           0     0     644     10608     `
+/188            0           0     0     644     6176      `

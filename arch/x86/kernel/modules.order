@@ -1,0 +1,2 @@
+arch/x86/kernel/msr.o
+arch/x86/kernel/cpuid.o

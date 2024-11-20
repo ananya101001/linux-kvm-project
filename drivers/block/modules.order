@@ -1,0 +1,10 @@
+drivers/block/brd.o
+drivers/block/loop.o
+drivers/block/nbd.o
+drivers/block/virtio_blk.o
+drivers/block/xen-blkfront.o
+drivers/block/xen-blkback/xen-blkback.o
+drivers/block/drbd/drbd.o
+drivers/block/rbd.o
+drivers/block/zram/zram.o
+drivers/block/null_blk/null_blk.o

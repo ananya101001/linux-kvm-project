@@ -1,0 +1,6 @@
+drivers/firmware/efi/efi-pstore.o
+drivers/firmware/efi/efibc.o
+drivers/firmware/efi/capsule-loader.o
+drivers/firmware/edd.o
+drivers/firmware/iscsi_ibft.o
+drivers/firmware/qemu_fw_cfg.o

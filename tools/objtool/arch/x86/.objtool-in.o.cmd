@@ -1,0 +1,1 @@
+cmd_/home/ananyapraveen_shetty/linux/tools/objtool/arch/x86/objtool-in.o :=  ld -r -o /home/ananyapraveen_shetty/linux/tools/objtool/arch/x86/objtool-in.o  /home/ananyapraveen_shetty/linux/tools/objtool/arch/x86/special.o /home/ananyapraveen_shetty/linux/tools/objtool/arch/x86/decode.o /home/ananyapraveen_shetty/linux/tools/objtool/arch/x86/orc.o

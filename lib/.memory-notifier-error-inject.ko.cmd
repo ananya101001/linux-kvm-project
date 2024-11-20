@@ -1,0 +1,1 @@
+savedcmd_lib/memory-notifier-error-inject.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o lib/memory-notifier-error-inject.ko lib/memory-notifier-error-inject.o lib/memory-notifier-error-inject.mod.o .module-common.o

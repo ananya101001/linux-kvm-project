@@ -1,0 +1,5 @@
+linux-upstream (6.12.0-g23acd177540d-1) bullseye; urgency=low
+
+  * Custom built Linux kernel.
+
+ -- ananyapraveen_shetty <ananyapraveen_shetty@vm1.c.warm-ring-440318-c5.internal>  Tue, 19 Nov 2024 20:01:00 +0000

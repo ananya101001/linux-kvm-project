@@ -1,0 +1,1 @@
+savedcmd_drivers/net/xen-netfront.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/net/xen-netfront.ko drivers/net/xen-netfront.o drivers/net/xen-netfront.mod.o .module-common.o

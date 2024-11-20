@@ -1,0 +1,1 @@
+savedcmd_drivers/net/vmxnet3/vmxnet3.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/net/vmxnet3/vmxnet3.ko drivers/net/vmxnet3/vmxnet3.o drivers/net/vmxnet3/vmxnet3.mod.o .module-common.o

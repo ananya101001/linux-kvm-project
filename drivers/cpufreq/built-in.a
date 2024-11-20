@@ -1,0 +1,20 @@
+!<thin>
+//                                              164       `
+cpufreq.o/
+freq_table.o/
+cpufreq_stats.o/
+cpufreq_performance.o/
+cpufreq_governor.o/
+cpufreq_governor_attr_set.o/
+amd-pstate.o/
+amd-pstate-trace.o/
+intel_pstate.o/
+/0              0           0     0     644     105744    `
+/11             0           0     0     644     14208     `
+/25             0           0     0     644     8528      `
+/42             0           0     0     644     5776      `
+/65             0           0     0     644     14016     `
+/85             0           0     0     644     5048      `
+/114            0           0     0     644     58680     `
+/128            0           0     0     644     9496      `
+/148            0           0     0     644     96304     `

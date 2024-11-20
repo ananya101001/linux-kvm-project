@@ -1,0 +1,18 @@
+!<thin>
+//                                              108       `
+host/core.o/
+host/ioctl.o/
+host/sysfs.o/
+host/pr.o/
+host/trace.o/
+host/multipath.o/
+host/zns.o/
+host/pci.o/
+/0              0           0     0     644     154160    `
+/13             0           0     0     644     17008     `
+/27             0           0     0     644     28584     `
+/41             0           0     0     644     7256      `
+/52             0           0     0     644     9984      `
+/66             0           0     0     644     35296     `
+/84             0           0     0     644     6592      `
+/96             0           0     0     644     70608     `

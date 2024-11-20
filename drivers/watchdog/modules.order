@@ -1,0 +1,10 @@
+drivers/watchdog/watchdog.o
+drivers/watchdog/pretimeout_noop.o
+drivers/watchdog/pretimeout_panic.o
+drivers/watchdog/wdt_pci.o
+drivers/watchdog/mei_wdt.o
+drivers/watchdog/ni903x_wdt.o
+drivers/watchdog/nic7018_wdt.o
+drivers/watchdog/xen_wdt.o
+drivers/watchdog/wdat_wdt.o
+drivers/watchdog/softdog.o

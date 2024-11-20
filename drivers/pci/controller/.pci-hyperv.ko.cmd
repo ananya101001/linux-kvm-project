@@ -1,0 +1,1 @@
+savedcmd_drivers/pci/controller/pci-hyperv.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/pci/controller/pci-hyperv.ko drivers/pci/controller/pci-hyperv.o drivers/pci/controller/pci-hyperv.mod.o .module-common.o

@@ -1,0 +1,5 @@
+drivers/pci/pcie/aer_inject.o
+drivers/pci/controller/pci-hyperv.o
+drivers/pci/controller/pci-hyperv-intf.o
+drivers/pci/pci-pf-stub.o
+drivers/pci/xen-pcifront.o

@@ -1,0 +1,1 @@
+savedcmd_lib/crypto/libaescfb.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o lib/crypto/libaescfb.ko lib/crypto/libaescfb.o lib/crypto/libaescfb.mod.o .module-common.o

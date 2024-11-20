@@ -1,0 +1,4 @@
+drivers/misc/vmw_balloon.o
+drivers/misc/mei/mei.o
+drivers/misc/mei/mei-txe.o
+drivers/misc/vmw_vmci/vmw_vmci.o

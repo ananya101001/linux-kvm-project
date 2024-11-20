@@ -1,0 +1,1 @@
+savedcmd_drivers/md/persistent-data/dm-persistent-data.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/md/persistent-data/dm-persistent-data.ko drivers/md/persistent-data/dm-persistent-data.o drivers/md/persistent-data/dm-persistent-data.mod.o .module-common.o

@@ -1,0 +1,1 @@
+savedcmd_drivers/input/modules.order := {   cat drivers/input/keyboard/modules.order;   echo drivers/input/mousedev.o;   echo drivers/input/evdev.o;   cat drivers/input/rmi4/modules.order; :; } > drivers/input/modules.order

@@ -1,0 +1,1 @@
+savedcmd_drivers/nvdimm/nd_pmem.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/nvdimm/nd_pmem.ko drivers/nvdimm/nd_pmem.o drivers/nvdimm/nd_pmem.mod.o .module-common.o

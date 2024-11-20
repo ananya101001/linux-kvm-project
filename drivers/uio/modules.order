@@ -1,0 +1,8 @@
+drivers/uio/uio.o
+drivers/uio/uio_cif.o
+drivers/uio/uio_aec.o
+drivers/uio/uio_sercos3.o
+drivers/uio/uio_pci_generic.o
+drivers/uio/uio_netx.o
+drivers/uio/uio_mf624.o
+drivers/uio/uio_hv_generic.o

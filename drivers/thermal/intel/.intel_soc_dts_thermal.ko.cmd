@@ -1,0 +1,1 @@
+savedcmd_drivers/thermal/intel/intel_soc_dts_thermal.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/thermal/intel/intel_soc_dts_thermal.ko drivers/thermal/intel/intel_soc_dts_thermal.o drivers/thermal/intel/intel_soc_dts_thermal.mod.o .module-common.o

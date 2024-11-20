@@ -1,0 +1,136 @@
+#include <linux/module.h>
+#include <linux/export-internal.h>
+#include <linux/compiler.h>
+
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__section(".gnu.linkonce.this_module") = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+MODULE_INFO(intree, "Y");
+
+KSYMTAB_DATA(xfrm_msg_min, "_gpl", "");
+KSYMTAB_DATA(xfrma_policy, "_gpl", "");
+
+SYMBOL_CRC(xfrm_msg_min, 0x4a0c7516, "_gpl");
+SYMBOL_CRC(xfrma_policy, 0xd8989478, "_gpl");
+
+static const struct modversion_info ____versions[]
+__used __section("__versions") = {
+	{ 0x1f4733b3, "__alloc_skb" },
+	{ 0x7ef38e38, "__nlmsg_put" },
+	{ 0xe8255b35, "netlink_unicast" },
+	{ 0x38ae1cb5, "__fib6_flush_trees" },
+	{ 0xbc431e3c, "netlink_broadcast_filtered" },
+	{ 0xd6e5a44c, "skb_trim" },
+	{ 0x447cd37, "xfrm_sad_getinfo" },
+	{ 0x281a64c9, "xfrm_spd_getinfo" },
+	{ 0xb01bebf9, "xfrm_get_acqseq" },
+	{ 0x60c1ad03, "xfrm_state_alloc" },
+	{ 0x49ca83, "xfrm_aead_get_byname" },
+	{ 0x754d539c, "strlen" },
+	{ 0x37a02412, "xfrm_aalg_get_byname" },
+	{ 0x52c5c991, "__kmalloc_noprof" },
+	{ 0xd6f50cf7, "xfrm_ealg_get_byname" },
+	{ 0xaab23340, "xfrm_calg_get_byname" },
+	{ 0x1399b4e6, "__xfrm_init_state" },
+	{ 0x98c89ade, "security_xfrm_state_alloc" },
+	{ 0x296695f, "refcount_warn_saturate" },
+	{ 0xaecd4a1b, "__xfrm_state_destroy" },
+	{ 0xc65dbc4d, "xfrm_init_replay" },
+	{ 0x762f2d9, "xfrm_dev_state_add" },
+	{ 0x62f6db8c, "xfrm_state_update" },
+	{ 0xb0408020, "xfrm_audit_state_add" },
+	{ 0x55119c01, "xfrm_state_add" },
+	{ 0x85fae201, "xfrm_dev_state_delete" },
+	{ 0xe5590ebd, "init_net" },
+	{ 0x98942be5, "xfrm_state_lookup" },
+	{ 0x5b7806cf, "xfrm_state_lookup_byaddr" },
+	{ 0xc599a772, "security_xfrm_state_delete" },
+	{ 0xa978fc36, "xfrm_state_delete" },
+	{ 0xb36d2f5f, "xfrm_audit_state_delete" },
+	{ 0xc3690fc, "_raw_spin_lock_bh" },
+	{ 0x1b10c238, "km_state_expired" },
+	{ 0xe46021ca, "_raw_spin_unlock_bh" },
+	{ 0xc565ab2c, "__xfrm_state_delete" },
+	{ 0x37e497e8, "verify_spi_info" },
+	{ 0xcd82355c, "xfrm_find_acq_byseq" },
+	{ 0x6cb6c0ba, "xfrm_find_acq" },
+	{ 0xe0fb9bde, "xfrm_alloc_spi" },
+	{ 0xe0b9065b, "security_xfrm_policy_alloc" },
+	{ 0x5f685f8c, "xfrm_policy_bysel_ctx" },
+	{ 0x6455298a, "security_xfrm_policy_free" },
+	{ 0x826a2de7, "km_policy_expired" },
+	{ 0x71463c1, "xfrm_policy_byid" },
+	{ 0x43133ecf, "xfrm_policy_destroy" },
+	{ 0x3e4bdd5b, "xfrm_policy_delete" },
+	{ 0x1f2338b3, "xfrm_audit_policy_delete" },
+	{ 0xdbbcab5f, "xfrm_dev_policy_add" },
+	{ 0x2506e88f, "km_query" },
+	{ 0x561a3bc2, "xfrm_state_free" },
+	{ 0x9fd830f1, "xfrm_policy_insert" },
+	{ 0x25f99762, "xfrm_audit_policy_add" },
+	{ 0x6383b27c, "__x86_indirect_thunk_rdx" },
+	{ 0xbdfb6dbb, "__fentry__" },
+	{ 0x5b8239ca, "__x86_return_thunk" },
+	{ 0x122c3a7e, "_printk" },
+	{ 0x20548812, "register_pernet_subsys" },
+	{ 0xb0c362f4, "xfrm_register_km" },
+	{ 0x8d522714, "__rcu_read_lock" },
+	{ 0x99a033d8, "netlink_has_listeners" },
+	{ 0x2469810f, "__rcu_read_unlock" },
+	{ 0x65487097, "__x86_indirect_thunk_rax" },
+	{ 0x69acdf38, "memcpy" },
+	{ 0x4dc8c704, "nla_reserve" },
+	{ 0x203b9e03, "netlink_kernel_release" },
+	{ 0x4dfa8d4b, "mutex_lock" },
+	{ 0x1441b7a8, "netlink_rcv_skb" },
+	{ 0x3213f038, "mutex_unlock" },
+	{ 0xba8fbd64, "_raw_spin_lock" },
+	{ 0xb5b54b34, "_raw_spin_unlock" },
+	{ 0x8a12b9dc, "xfrm_policy_hash_rebuild" },
+	{ 0xe6d2458e, "do_trace_netlink_extack" },
+	{ 0x42a3a53, "xfrm_state_flush" },
+	{ 0x4700734c, "km_state_notify" },
+	{ 0xf0fdf6cb, "__stack_chk_fail" },
+	{ 0xc425c04, "xfrm_policy_walk_done" },
+	{ 0x113ad0ce, "xfrm_policy_walk" },
+	{ 0xc9df055a, "xfrm_policy_walk_init" },
+	{ 0x6ecee395, "xfrm_state_walk_done" },
+	{ 0xe68a26a4, "__netlink_kernel_create" },
+	{ 0xf0cf9936, "xfrm_unregister_km" },
+	{ 0x279ed4c, "unregister_pernet_subsys" },
+	{ 0x36cd5f26, "nla_put" },
+	{ 0xf6cb9ccc, "netlink_net_capable" },
+	{ 0xdf40ccce, "const_pcpu_hot" },
+	{ 0x83f51840, "__nla_parse" },
+	{ 0x277d58f3, "sk_skb_reason_drop" },
+	{ 0x7aa1756e, "kvfree" },
+	{ 0x753e172b, "__netlink_dump_start" },
+	{ 0xa8ade12b, "kmemdup_noprof" },
+	{ 0x37a0cba, "kfree" },
+	{ 0x2782b393, "xfrm_state_walk_init" },
+	{ 0x2a8ca7df, "xfrm_state_walk" },
+	{ 0x4c88cf27, "xfrm_policy_alloc" },
+	{ 0x51933ea5, "xfrm_policy_flush" },
+	{ 0xa813328, "km_policy_notify" },
+	{ 0x9f1380a0, "xfrm_migrate" },
+	{ 0x127d83ea, "security_locked_down" },
+	{ 0xa916b694, "strnlen" },
+	{ 0x476b165a, "sized_strscpy" },
+	{ 0xfb578fc5, "memset" },
+	{ 0x9166fada, "strncpy" },
+	{ 0x3f178e25, "nla_put_64bit" },
+	{ 0x75ca79b5, "__fortify_panic" },
+	{ 0x8a02d2d4, "module_layout" },
+};
+
+MODULE_INFO(depends, "xfrm_algo");
+

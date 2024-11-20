@@ -1,0 +1,1 @@
+savedcmd_lib/crypto/libpoly1305.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o lib/crypto/libpoly1305.ko lib/crypto/libpoly1305.o lib/crypto/libpoly1305.mod.o .module-common.o

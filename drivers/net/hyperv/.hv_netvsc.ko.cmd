@@ -1,0 +1,1 @@
+savedcmd_drivers/net/hyperv/hv_netvsc.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/net/hyperv/hv_netvsc.ko drivers/net/hyperv/hv_netvsc.o drivers/net/hyperv/hv_netvsc.mod.o .module-common.o

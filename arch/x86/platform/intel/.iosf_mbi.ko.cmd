@@ -1,0 +1,1 @@
+savedcmd_arch/x86/platform/intel/iosf_mbi.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o arch/x86/platform/intel/iosf_mbi.ko arch/x86/platform/intel/iosf_mbi.o arch/x86/platform/intel/iosf_mbi.mod.o .module-common.o

@@ -1,0 +1,11 @@
+drivers/cpufreq/cpufreq_powersave.o
+drivers/cpufreq/cpufreq_userspace.o
+drivers/cpufreq/cpufreq_ondemand.o
+drivers/cpufreq/cpufreq_conservative.o
+drivers/cpufreq/acpi-cpufreq.o
+drivers/cpufreq/powernow-k8.o
+drivers/cpufreq/pcc-cpufreq.o
+drivers/cpufreq/speedstep-lib.o
+drivers/cpufreq/speedstep-centrino.o
+drivers/cpufreq/p4-clockmod.o
+drivers/cpufreq/amd_freq_sensitivity.o

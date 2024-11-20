@@ -1,0 +1,3 @@
+fs/fuse/fuse.o
+fs/fuse/cuse.o
+fs/fuse/virtiofs.o

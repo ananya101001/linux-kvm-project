@@ -1,0 +1,7 @@
+drivers/net/ethernet/amazon/ena/ena.o
+drivers/net/ethernet/google/gve/gve.o
+drivers/net/ethernet/intel/ixgbevf/ixgbevf.o
+drivers/net/ethernet/mellanox/mlx4/mlx4_core.o
+drivers/net/ethernet/mellanox/mlx4/mlx4_en.o
+drivers/net/ethernet/mellanox/mlx5/core/mlx5_core.o
+drivers/net/ethernet/mellanox/mlxfw/mlxfw.o

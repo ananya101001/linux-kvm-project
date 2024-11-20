@@ -1,0 +1,1 @@
+savedcmd_drivers/pps/pps_core.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/pps/pps_core.ko drivers/pps/pps_core.o drivers/pps/pps_core.mod.o .module-common.o

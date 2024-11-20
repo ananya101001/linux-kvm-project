@@ -1,0 +1,127 @@
+#include <linux/module.h>
+#include <linux/export-internal.h>
+#include <linux/compiler.h>
+
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__section(".gnu.linkonce.this_module") = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+MODULE_INFO(intree, "Y");
+
+
+
+static const struct modversion_info ____versions[]
+__used __section("__versions") = {
+	{ 0xbdfb6dbb, "__fentry__" },
+	{ 0x436e1b29, "vhost_poll_init" },
+	{ 0xf7a533b1, "vhost_vq_init_access" },
+	{ 0x65487097, "__x86_indirect_thunk_rax" },
+	{ 0x377a1346, "vhost_poll_stop" },
+	{ 0xc2b7f0ca, "tun_get_tx_ring" },
+	{ 0x88e1d0f0, "page_frag_free" },
+	{ 0x1000e51, "schedule" },
+	{ 0x5694b563, "vhost_exceeds_weight" },
+	{ 0xf0fdf6cb, "__stack_chk_fail" },
+	{ 0x8aa9f350, "vhost_poll_queue" },
+	{ 0x441d0de9, "__kmalloc_large_noprof" },
+	{ 0xe852485b, "tun_get_socket" },
+	{ 0x7be4c8d1, "vhost_discard_vq_desc" },
+	{ 0xdf40ccce, "const_pcpu_hot" },
+	{ 0x74628af7, "vhost_add_used_and_signal" },
+	{ 0x7cd8d75e, "page_offset_base" },
+	{ 0xc81ce80d, "compat_ptr_ioctl" },
+	{ 0xbcb36fe4, "hugetlb_optimize_vmemmap_key" },
+	{ 0xfe487975, "init_wait_entry" },
+	{ 0x37712435, "fput" },
+	{ 0x6091797f, "synchronize_rcu" },
+	{ 0xfd2b3e45, "vhost_dev_reset_owner_prepare" },
+	{ 0xe9385861, "vhost_add_used_and_signal_n" },
+	{ 0x49f768d8, "vhost_dev_set_owner" },
+	{ 0x97e6ef4, "vhost_chr_write_iter" },
+	{ 0x2a71977a, "noop_llseek" },
+	{ 0xd7534c72, "vhost_get_vq_desc" },
+	{ 0x4dfa8d4b, "mutex_lock" },
+	{ 0x1dc794, "vhost_chr_read_iter" },
+	{ 0x41ef63c1, "vhost_log_write" },
+	{ 0x4c9d28b0, "phys_base" },
+	{ 0x3c3fce39, "__local_bh_enable_ip" },
+	{ 0xb5f4750d, "__put_devmap_managed_folio_refs" },
+	{ 0xd35cce70, "_raw_spin_unlock_irqrestore" },
+	{ 0x53b61bc6, "vhost_vq_has_work" },
+	{ 0xfb578fc5, "memset" },
+	{ 0x532341d9, "vhost_dev_ioctl" },
+	{ 0xea43f98d, "misc_register" },
+	{ 0xea202c7d, "vhost_disable_notify" },
+	{ 0x5b8239ca, "__x86_return_thunk" },
+	{ 0x6b10bee1, "_copy_to_user" },
+	{ 0xd0a886fe, "vhost_dev_has_owner" },
+	{ 0xd9a5ea54, "__init_waitqueue_head" },
+	{ 0x8365a4bc, "vhost_clear_msg" },
+	{ 0xe8d8b70d, "vhost_set_backend_features" },
+	{ 0xbb9ed3bf, "mutex_trylock" },
+	{ 0x92f3cc1a, "vhost_enable_notify" },
+	{ 0x97651e6c, "vmemmap_base" },
+	{ 0x27f9addc, "vhost_log_access_ok" },
+	{ 0x2b4b4ca2, "vhost_dev_cleanup" },
+	{ 0x3213f038, "mutex_unlock" },
+	{ 0xc3777061, "vhost_chr_poll" },
+	{ 0x94c1bfc3, "__folio_put" },
+	{ 0x2cf56265, "__dynamic_pr_debug" },
+	{ 0xe11f6bd, "__kmalloc_cache_noprof" },
+	{ 0xdb47343, "vhost_poll_start" },
+	{ 0xeec9a487, "_copy_from_iter" },
+	{ 0x42bed6c6, "vq_meta_prefetch" },
+	{ 0x2e562224, "vhost_dev_check_owner" },
+	{ 0xef7307ba, "page_frag_cache_drain" },
+	{ 0x4ce0f44d, "__page_frag_alloc_align" },
+	{ 0x1477c4a7, "param_ops_int" },
+	{ 0x7aa1756e, "kvfree" },
+	{ 0xb5b54b34, "_raw_spin_unlock" },
+	{ 0xe820e399, "sockfd_lookup" },
+	{ 0xc10e997, "eventfd_signal_mask" },
+	{ 0x31f2a14c, "__kvmalloc_node_noprof" },
+	{ 0xe2c17b5d, "__SCT__might_resched" },
+	{ 0x4c398cf1, "kmalloc_caches" },
+	{ 0x7ac1254b, "local_clock" },
+	{ 0xf0dc5ba9, "vhost_vq_avail_empty" },
+	{ 0x587f22d7, "devmap_managed_key" },
+	{ 0x9f214a6, "vhost_init_device_iotlb" },
+	{ 0x88db9f48, "__check_object_size" },
+	{ 0x639ccacd, "_copy_to_iter" },
+	{ 0xf80d81c2, "misc_deregister" },
+	{ 0x946487, "vhost_vring_ioctl" },
+	{ 0x13c49cc2, "_copy_from_user" },
+	{ 0xea377d84, "tap_get_ptr_ring" },
+	{ 0xcdd52b72, "vhost_dev_flush" },
+	{ 0x4099f919, "tun_ptr_free" },
+	{ 0x48d88a2c, "__SCT__preempt_schedule" },
+	{ 0xf005383c, "vhost_vq_access_ok" },
+	{ 0x665635f0, "vhost_dev_stop" },
+	{ 0x92540fbf, "finish_wait" },
+	{ 0xaa788152, "tap_get_socket" },
+	{ 0x1f085485, "iov_iter_advance" },
+	{ 0x61e1334, "fget" },
+	{ 0x15502eb0, "vhost_dev_init" },
+	{ 0x734e5544, "vhost_dev_reset_owner" },
+	{ 0x37a0cba, "kfree" },
+	{ 0xdd56e691, "pcpu_hot" },
+	{ 0x8c26d495, "prepare_to_wait_event" },
+	{ 0x44cf8d9b, "iov_iter_init" },
+	{ 0xe2964344, "__wake_up" },
+	{ 0x34db050b, "_raw_spin_lock_irqsave" },
+	{ 0xba8fbd64, "_raw_spin_lock" },
+	{ 0x8a02d2d4, "module_layout" },
+};
+
+MODULE_INFO(depends, "vhost,tun,tap");
+
+
+MODULE_INFO(srcversion, "2DA24299DED39354E4F3F08");

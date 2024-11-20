@@ -1,0 +1,1 @@
+savedcmd_drivers/input/serio/hyperv-keyboard.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/input/serio/hyperv-keyboard.ko drivers/input/serio/hyperv-keyboard.o drivers/input/serio/hyperv-keyboard.mod.o .module-common.o

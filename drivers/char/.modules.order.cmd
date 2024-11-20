@@ -1,0 +1,1 @@
+savedcmd_drivers/char/modules.order := {   cat drivers/char/agp/modules.order;   echo drivers/char/ttyprintk.o;   echo drivers/char/virtio_console.o;   echo drivers/char/nvram.o;   cat drivers/char/hw_random/modules.order;   echo drivers/char/hangcheck-timer.o;   cat drivers/char/tpm/modules.order; :; } > drivers/char/modules.order

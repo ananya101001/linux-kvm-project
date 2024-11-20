@@ -1,0 +1,1 @@
+savedcmd_drivers/char/virtio_console.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/char/virtio_console.ko drivers/char/virtio_console.o drivers/char/virtio_console.mod.o .module-common.o

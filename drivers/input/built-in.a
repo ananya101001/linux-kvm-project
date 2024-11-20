@@ -1,0 +1,19 @@
+!<thin>
+//                                              114       `
+input.o/
+input-compat.o/
+input-mt.o/
+input-poller.o/
+ff-core.o/
+touchscreen.o/
+vivaldi-fmap.o/
+keyboard/atkbd.o/
+
+/0              0           0     0     644     70304     `
+/9              0           0     0     644     3896      `
+/25             0           0     0     644     10304     `
+/37             0           0     0     644     9352      `
+/53             0           0     0     644     9424      `
+/64             0           0     0     644     6480      `
+/79             0           0     0     644     3264      `
+/95             0           0     0     644     48936     `

@@ -1,0 +1,6 @@
+drivers/char/tpm/tpm.o
+drivers/char/tpm/tpm_tis_core.o
+drivers/char/tpm/tpm_tis.o
+drivers/char/tpm/xen-tpmfront.o
+drivers/char/tpm/tpm_crb.o
+drivers/char/tpm/tpm_vtpm_proxy.o

@@ -1,0 +1,3 @@
+drivers/firmware/efi/efi-pstore.o
+drivers/firmware/efi/efibc.o
+drivers/firmware/efi/capsule-loader.o

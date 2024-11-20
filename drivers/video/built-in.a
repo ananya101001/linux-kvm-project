@@ -1,0 +1,79 @@
+!<thin>
+//                                              836       `
+aperture.o/
+screen_info_generic.o/
+screen_info_pci.o/
+cmdline.o/
+nomodeset.o/
+console/dummycon.o/
+console/vgacon.o/
+fbdev/core/fb_notify.o/
+fbdev/core/fb_info.o/
+fbdev/core/fbmem.o/
+fbdev/core/fbcmap.o/
+fbdev/core/modedb.o/
+fbdev/core/fbcvt.o/
+fbdev/core/fb_cmdline.o/
+fbdev/core/fb_backlight.o/
+fbdev/core/fbmon.o/
+fbdev/core/fb_defio.o/
+fbdev/core/fb_chrdev.o/
+fbdev/core/fb_procfs.o/
+fbdev/core/fbsysfs.o/
+fbdev/core/fbcon.o/
+fbdev/core/bitblit.o/
+fbdev/core/softcursor.o/
+fbdev/core/tileblit.o/
+fbdev/core/fbcon_rotate.o/
+fbdev/core/fbcon_cw.o/
+fbdev/core/fbcon_ud.o/
+fbdev/core/fbcon_ccw.o/
+fbdev/core/cfbfillrect.o/
+fbdev/core/cfbcopyarea.o/
+fbdev/core/cfbimgblt.o/
+fbdev/core/fb_io_fops.o/
+fbdev/core/sysfillrect.o/
+fbdev/core/syscopyarea.o/
+fbdev/core/sysimgblt.o/
+fbdev/core/fb_sys_fops.o/
+fbdev/xen-fbfront.o/
+fbdev/efifb.o/
+
+/0              0           0     0     644     7504      `
+/12             0           0     0     644     3952      `
+/35             0           0     0     644     5352      `
+/54             0           0     0     644     5016      `
+/65             0           0     0     644     3504      `
+/78             0           0     0     644     4856      `
+/98             0           0     0     644     48048     `
+/116            0           0     0     644     3520      `
+/140            0           0     0     644     3584      `
+/162            0           0     0     644     18968     `
+/182            0           0     0     644     10952     `
+/203            0           0     0     644     21960     `
+/224            0           0     0     644     5136      `
+/244            0           0     0     644     2816      `
+/269            0           0     0     644     1072      `
+/296            0           0     0     644     18552     `
+/316            0           0     0     644     12344     `
+/339            0           0     0     644     13144     `
+/363            0           0     0     644     3960      `
+/387            0           0     0     644     13360     `
+/409            0           0     0     644     64688     `
+/429            0           0     0     644     8056      `
+/451            0           0     0     644     2720      `
+/476            0           0     0     644     4560      `
+/499            0           0     0     644     3544      `
+/526            0           0     0     644     7992      `
+/549            0           0     0     644     8104      `
+/572            0           0     0     644     8160      `
+/596            0           0     0     644     7496      `
+/622            0           0     0     644     5664      `
+/648            0           0     0     644     5784      `
+/672            0           0     0     644     6088      `
+/697            0           0     0     644     7304      `
+/723            0           0     0     644     5536      `
+/749            0           0     0     644     5720      `
+/773            0           0     0     644     5312      `
+/799            0           0     0     644     19440     `
+/820            0           0     0     644     14800     `

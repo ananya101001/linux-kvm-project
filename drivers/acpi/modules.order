@@ -1,0 +1,7 @@
+drivers/acpi/button.o
+drivers/acpi/fan.o
+drivers/acpi/acpi_tad.o
+drivers/acpi/nfit/nfit.o
+drivers/acpi/sbshc.o
+drivers/acpi/sbs.o
+drivers/acpi/acpi_pad.o

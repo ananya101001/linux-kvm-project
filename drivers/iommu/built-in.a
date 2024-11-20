@@ -1,0 +1,41 @@
+!<thin>
+//                                              284       `
+intel/dmar.o/
+intel/iommu.o/
+intel/pasid.o/
+intel/nested.o/
+intel/cache.o/
+intel/trace.o/
+intel/cap_audit.o/
+intel/svm.o/
+intel/irq_remapping.o/
+intel/perfmon.o/
+iommu.o/
+iommu-traces.o/
+iommu-sysfs.o/
+dma-iommu.o/
+iova.o/
+irq_remapping.o/
+hyperv-iommu.o/
+iommu-sva.o/
+io-pgfault.o/
+
+/0              0           0     0     644     63296     `
+/14             0           0     0     644     101776    `
+/29             0           0     0     644     23456     `
+/44             0           0     0     644     7192      `
+/60             0           0     0     644     14960     `
+/75             0           0     0     644     32944     `
+/90             0           0     0     644     17208     `
+/109            0           0     0     644     17704     `
+/122            0           0     0     644     34088     `
+/145            0           0     0     644     38680     `
+/162            0           0     0     644     85760     `
+/171            0           0     0     644     31376     `
+/187            0           0     0     644     6368      `
+/202            0           0     0     644     38488     `
+/215            0           0     0     644     19504     `
+/223            0           0     0     644     7960      `
+/240            0           0     0     644     11072     `
+/256            0           0     0     644     8448      `
+/269            0           0     0     644     12824     `

@@ -1,0 +1,1 @@
+savedcmd_arch/x86/hyperv/built-in.a := rm -f arch/x86/hyperv/built-in.a;  printf "arch/x86/hyperv/%s " hv_init.o mmu.o nested.o irqdomain.o ivm.o hv_apic.o hv_proc.o hv_spinlock.o | xargs ar cDPrST arch/x86/hyperv/built-in.a

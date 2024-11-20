@@ -1,0 +1,1 @@
+savedcmd_drivers/xen/xen-privcmd.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o drivers/xen/xen-privcmd.ko drivers/xen/xen-privcmd.o drivers/xen/xen-privcmd.mod.o .module-common.o

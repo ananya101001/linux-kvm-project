@@ -1,0 +1,117 @@
+#include <linux/module.h>
+#include <linux/export-internal.h>
+#include <linux/compiler.h>
+
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__section(".gnu.linkonce.this_module") = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+MODULE_INFO(intree, "Y");
+
+
+
+static const struct modversion_info ____versions[]
+__used __section("__versions") = {
+	{ 0x9cdfb3f7, "sysctl_fb_tunnels_only_for_init_net" },
+	{ 0xe5590ebd, "init_net" },
+	{ 0x1b6287cd, "alloc_netdev_mqs" },
+	{ 0x2ec2bf40, "register_netdev" },
+	{ 0xa916b694, "strnlen" },
+	{ 0x56d691a8, "free_netdev" },
+	{ 0x777137ac, "dev_addr_mod" },
+	{ 0x88287630, "register_netdevice" },
+	{ 0x50242d10, "__iptunnel_pull_header" },
+	{ 0x27df312f, "__xfrm_policy_check" },
+	{ 0x3267a22d, "ip_tunnel_rcv" },
+	{ 0xc1f0e49d, "make_kuid" },
+	{ 0x32cd197c, "ip_route_output_flow" },
+	{ 0xf04a650c, "dst_release" },
+	{ 0x77cb69cc, "__dev_get_by_index" },
+	{ 0xae39f80e, "dst_cache_init" },
+	{ 0xf6ebc03b, "net_ratelimit" },
+	{ 0xe6319bdd, "ipv6_chk_custom_prefix" },
+	{ 0x53569707, "this_cpu_off" },
+	{ 0x6335dfe9, "netif_rx" },
+	{ 0x29b1344e, "skb_copy_bits" },
+	{ 0x982dcbb8, "ipv6_chk_prefix" },
+	{ 0x64f4c46e, "__pskb_pull_tail" },
+	{ 0x65487097, "__x86_indirect_thunk_rax" },
+	{ 0xd542439, "__ipv6_addr_type" },
+	{ 0xd45cf84d, "dst_cache_get_ip4" },
+	{ 0x9e24dbd0, "skb_realloc_headroom" },
+	{ 0x9b2319ad, "skb_set_owner_w" },
+	{ 0xe065f55b, "consume_skb" },
+	{ 0xc52df069, "iptun_encaps" },
+	{ 0xd4c6590e, "iptunnel_xmit" },
+	{ 0x2cf56265, "__dynamic_pr_debug" },
+	{ 0x4385eee8, "dst_cache_set_ip4" },
+	{ 0x63db0b8c, "neigh_destroy" },
+	{ 0xbca24e1e, "ip6_mtu" },
+	{ 0x45a9787d, "icmpv6_ndo_send" },
+	{ 0x296695f, "refcount_warn_saturate" },
+	{ 0x39374f5e, "ipv4_mtu" },
+	{ 0x62849ac7, "dev_valid_name" },
+	{ 0x476b165a, "sized_strscpy" },
+	{ 0x3e903560, "ip_tunnel_netlink_encap_parms" },
+	{ 0xa4962bb, "ip_tunnel_encap_setup" },
+	{ 0x13c49cc2, "_copy_from_user" },
+	{ 0x9885d36b, "ip_tunnel_siocdevprivate" },
+	{ 0xc6cbbc89, "capable" },
+	{ 0x6b10bee1, "_copy_to_user" },
+	{ 0x88db9f48, "__check_object_size" },
+	{ 0xb2fd5ceb, "__put_user_4" },
+	{ 0x4c398cf1, "kmalloc_caches" },
+	{ 0xe11f6bd, "__kmalloc_cache_noprof" },
+	{ 0x7f835b87, "ip_tunnel_parm_from_user" },
+	{ 0x609f1c7e, "synchronize_net" },
+	{ 0x959e330f, "ip_tunnel_get_iflink" },
+	{ 0x6425da09, "ip_tunnel_get_link_net" },
+	{ 0x22199426, "param_ops_bool" },
+	{ 0xbdfb6dbb, "__fentry__" },
+	{ 0x78208bb1, "ip_tunnel_header_ops" },
+	{ 0x5b8239ca, "__x86_return_thunk" },
+	{ 0x122c3a7e, "_printk" },
+	{ 0xa47c4028, "register_pernet_device" },
+	{ 0x1ffb1ee2, "xfrm4_tunnel_register" },
+	{ 0xc217dd22, "rtnl_link_register" },
+	{ 0x86512576, "unregister_pernet_device" },
+	{ 0x8ca2c32c, "xfrm4_tunnel_deregister" },
+	{ 0x36cd5f26, "nla_put" },
+	{ 0xf0fdf6cb, "__stack_chk_fail" },
+	{ 0x8d522714, "__rcu_read_lock" },
+	{ 0x2469810f, "__rcu_read_unlock" },
+	{ 0x82879e15, "unregister_netdevice_queue" },
+	{ 0x9fe62620, "ip_tunnel_netlink_parms" },
+	{ 0xf1db1704, "nla_memcpy" },
+	{ 0x75ca79b5, "__fortify_panic" },
+	{ 0x15ba50a6, "jiffies" },
+	{ 0x42e0bcc9, "netdev_state_change" },
+	{ 0xada38766, "dst_cache_destroy" },
+	{ 0x37a0cba, "kfree" },
+	{ 0x85670f1d, "rtnl_is_locked" },
+	{ 0x56470118, "__warn_printk" },
+	{ 0x44c10a52, "kvfree_call_rcu" },
+	{ 0x28aa6a67, "call_rcu" },
+	{ 0xeb128899, "ip6_err_gen_icmpv6_unreach" },
+	{ 0x5e31881f, "ipv4_update_pmtu" },
+	{ 0xd390b3fe, "ipv4_redirect" },
+	{ 0xc748bccf, "rtnl_link_unregister" },
+	{ 0x60a13e90, "rcu_barrier" },
+	{ 0x52c5c991, "__kmalloc_noprof" },
+	{ 0x182d39a9, "ns_capable" },
+	{ 0x9e62cb44, "iptunnel_handle_offloads" },
+	{ 0xaccd7dc4, "ip_tunnel_xmit" },
+	{ 0x277d58f3, "sk_skb_reason_drop" },
+	{ 0x8a02d2d4, "module_layout" },
+};
+
+MODULE_INFO(depends, "ip_tunnel,tunnel4");
+

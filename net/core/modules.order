@@ -1,0 +1,3 @@
+net/core/pktgen.o
+net/core/drop_monitor.o
+net/core/failover.o

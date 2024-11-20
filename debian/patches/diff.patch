@@ -1,0 +1,43 @@
+Subject: Add local diff
+Author: ananyapraveen_shetty <ananyapraveen_shetty@vm1.c.warm-ring-440318-c5.internal>
+
+diff --git a/virt/kvm/kvm_main.c b/virt/kvm/kvm_main.c
+index 6ca7a1045bbb..99ad89c421b7 100644
+--- a/virt/kvm/kvm_main.c
++++ b/virt/kvm/kvm_main.c
+@@ -9,6 +9,9 @@
+  *   Avi Kivity   <avi@qumranet.com>
+  *   Yaniv Kamay  <yaniv@qumranet.com>
+  */
++#define MAX_EXIT_TYPES 256
++static unsigned long exit_counters[MAX_EXIT_TYPES]={0};
++static unsigned long total_exits;
+ 
+ #include <kvm/iodev.h>
+ 
+@@ -69,6 +72,7 @@
+ 
+ /* Worst case buffer size needed for holding an integer. */
+ #define ITOA_MAX_LEN 12
++#define MAX_EXIT_TYPES 256
+ 
+ MODULE_AUTHOR("Qumranet");
+ MODULE_DESCRIPTION("Kernel-based Virtual Machine (KVM) Hypervisor");
+@@ -4474,6 +4478,17 @@ static long kvm_vcpu_ioctl(struct file *filp,
+ 		vcpu->wants_to_run = !READ_ONCE(vcpu->run->immediate_exit__unsafe);
+ 		r = kvm_arch_vcpu_ioctl_run(vcpu);
+ 		vcpu->wants_to_run = false;
++		int exit_type = vcpu->run->exit_reason;
++		total_exits++;
++		exit_counters[exit_type]++;
++		if (total_exits % 10000 == 0) {
++			printk(KERN_INFO "Exit Stats:\n");
++			for (int i = 0; i < MAX_EXIT_TYPES; i++) {
++				if (exit_counters[i] > 0) {
++					printk(KERN_INFO "Exit Type %d: %lu exits\n", i, exit_counters[i]);
++				}
++			}
++		}
+ 
+ 		trace_kvm_userspace_exit(vcpu->run->exit_reason, r);
+ 		break;

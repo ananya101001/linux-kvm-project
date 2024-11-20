@@ -1,0 +1,1 @@
+savedcmd_drivers/hv/hv_vmbus.mod := printf '%s\n'   vmbus_drv.o hv.o connection.o channel.o channel_mgmt.o ring_buffer.o hv_trace.o | awk '!x[$$0]++ { print("drivers/hv/"$$0) }' > drivers/hv/hv_vmbus.mod

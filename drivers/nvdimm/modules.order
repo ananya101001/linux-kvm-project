@@ -1,0 +1,6 @@
+drivers/nvdimm/libnvdimm.o
+drivers/nvdimm/nd_pmem.o
+drivers/nvdimm/nd_btt.o
+drivers/nvdimm/nd_e820.o
+drivers/nvdimm/virtio_pmem.o
+drivers/nvdimm/nd_virtio.o

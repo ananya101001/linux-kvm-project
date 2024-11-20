@@ -1,0 +1,115 @@
+#include <linux/module.h>
+#include <linux/export-internal.h>
+#include <linux/compiler.h>
+
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__section(".gnu.linkonce.this_module") = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+MODULE_INFO(intree, "Y");
+
+
+
+static const struct modversion_info ____versions[]
+__used __section("__versions") = {
+	{ 0xafd744c6, "__x86_indirect_thunk_rbp" },
+	{ 0x449ad0a7, "memcmp" },
+	{ 0xb7f990e9, "rht_bucket_nested" },
+	{ 0xafd64ce2, "skb_flow_dissect_tunnel_info" },
+	{ 0x60a7926a, "skb_flow_dissect_ct" },
+	{ 0xfa4c4f3d, "skb_flow_dissect_hash" },
+	{ 0xf35293b1, "__skb_flow_dissect" },
+	{ 0xed24a1f1, "skb_flow_dissect_meta" },
+	{ 0xb87cb4c0, "tcf_action_exec" },
+	{ 0xefaf2e4f, "tcf_queue_work" },
+	{ 0x85670f1d, "rtnl_is_locked" },
+	{ 0x15e8aa1c, "tc_setup_cb_reoffload" },
+	{ 0x56470118, "__warn_printk" },
+	{ 0xcc1b882a, "idr_get_next_ul" },
+	{ 0x176c2ded, "tcf_exts_terse_dump" },
+	{ 0xd6e5a44c, "skb_trim" },
+	{ 0x2d3385d3, "system_wq" },
+	{ 0xc5b6f236, "queue_work_on" },
+	{ 0xb202f0d7, "rht_bucket_nested_insert" },
+	{ 0xe0313d71, "rhashtable_insert_slow" },
+	{ 0x3f178e25, "nla_put_64bit" },
+	{ 0x77cb69cc, "__dev_get_by_index" },
+	{ 0xa916b694, "strnlen" },
+	{ 0x75ca79b5, "__fortify_panic" },
+	{ 0xfc5d8856, "tcf_exts_dump" },
+	{ 0x52a019e9, "tcf_exts_dump_stats" },
+	{ 0xd0d156e9, "__rht_bucket_nested" },
+	{ 0x7665a95b, "idr_remove" },
+	{ 0x8e17b3ae, "idr_destroy" },
+	{ 0xe893d918, "__module_get" },
+	{ 0xf809c66c, "tcf_exts_init_ex" },
+	{ 0xf08db286, "tcf_exts_validate_ex" },
+	{ 0xc3690fc, "_raw_spin_lock_bh" },
+	{ 0xe46021ca, "_raw_spin_unlock_bh" },
+	{ 0xd9916c3a, "idr_alloc_u32" },
+	{ 0xc7a4fbed, "rtnl_lock" },
+	{ 0x6e720ff2, "rtnl_unlock" },
+	{ 0x86dd708d, "tc_skb_ext_tc_enable" },
+	{ 0x7b82b9a1, "idr_replace" },
+	{ 0x5b8239ca, "__x86_return_thunk" },
+	{ 0xbdfb6dbb, "__fentry__" },
+	{ 0xdeb4106d, "register_tcf_proto_ops" },
+	{ 0x8df92f66, "memchr_inv" },
+	{ 0x36cd5f26, "nla_put" },
+	{ 0xf0fdf6cb, "__stack_chk_fail" },
+	{ 0x20978fb9, "idr_find" },
+	{ 0xd86a776b, "flow_rule_alloc" },
+	{ 0x362f9a8, "__x86_indirect_thunk_r12" },
+	{ 0x37a0cba, "kfree" },
+	{ 0xf1db1704, "nla_memcpy" },
+	{ 0x82f9219d, "skb_flow_dissector_init" },
+	{ 0xba8fbd64, "_raw_spin_lock" },
+	{ 0x7696f8c7, "__list_add_valid_or_report" },
+	{ 0xb5b54b34, "_raw_spin_unlock" },
+	{ 0x6d5f5b91, "radix_tree_tagged" },
+	{ 0x2a5ea9ef, "rhashtable_destroy" },
+	{ 0x7f1fd79f, "module_put" },
+	{ 0x807a82c8, "unregister_tcf_proto_ops" },
+	{ 0x83f51840, "__nla_parse" },
+	{ 0xe6d2458e, "do_trace_netlink_extack" },
+	{ 0xe37056dc, "pv_ops" },
+	{ 0xd4ec10e6, "BUG_func" },
+	{ 0xdd56e691, "pcpu_hot" },
+	{ 0x48d88a2c, "__SCT__preempt_schedule" },
+	{ 0xaac5defa, "tcf_exts_destroy" },
+	{ 0x7dc5ffa7, "tc_skb_ext_tc_disable" },
+	{ 0x92104429, "__put_net" },
+	{ 0x296695f, "refcount_warn_saturate" },
+	{ 0xaf854864, "tc_setup_cb_call" },
+	{ 0x65487097, "__x86_indirect_thunk_rax" },
+	{ 0xfb578fc5, "memset" },
+	{ 0x69acdf38, "memcpy" },
+	{ 0x950eb34e, "__list_del_entry_valid_or_report" },
+	{ 0x2c65f067, "tc_setup_cb_destroy" },
+	{ 0x8f82af7a, "tcf_exts_num_actions" },
+	{ 0x50e5f892, "tc_setup_offload_action" },
+	{ 0x98fd7c7b, "tc_setup_cb_add" },
+	{ 0x537cd94e, "tc_cleanup_offload_action" },
+	{ 0x1579fe3b, "tcf_action_update_hw_stats" },
+	{ 0x4c398cf1, "kmalloc_caches" },
+	{ 0xe11f6bd, "__kmalloc_cache_noprof" },
+	{ 0x28839c12, "rhashtable_init_noprof" },
+	{ 0x84823cf3, "nla_strscpy" },
+	{ 0x6e697614, "__dev_get_by_name" },
+	{ 0x3d1059ea, "__nla_validate" },
+	{ 0x8d522714, "__rcu_read_lock" },
+	{ 0x670ecece, "__x86_indirect_thunk_rbx" },
+	{ 0x2469810f, "__rcu_read_unlock" },
+	{ 0x8a02d2d4, "module_layout" },
+};
+
+MODULE_INFO(depends, "");
+

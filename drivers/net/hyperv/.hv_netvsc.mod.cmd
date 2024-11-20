@@ -1,0 +1,1 @@
+savedcmd_drivers/net/hyperv/hv_netvsc.mod := printf '%s\n'   netvsc_drv.o netvsc.o rndis_filter.o netvsc_trace.o netvsc_bpf.o | awk '!x[$$0]++ { print("drivers/net/hyperv/"$$0) }' > drivers/net/hyperv/hv_netvsc.mod

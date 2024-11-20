@@ -1,0 +1,4 @@
+drivers/vfio/vfio.o
+drivers/vfio/vfio_iommu_type1.o
+drivers/vfio/pci/vfio-pci-core.o
+drivers/vfio/pci/vfio-pci.o

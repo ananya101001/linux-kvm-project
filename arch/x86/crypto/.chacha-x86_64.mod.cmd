@@ -1,0 +1,1 @@
+savedcmd_arch/x86/crypto/chacha-x86_64.mod := printf '%s\n'   chacha-avx2-x86_64.o chacha-ssse3-x86_64.o chacha_glue.o chacha-avx512vl-x86_64.o | awk '!x[$$0]++ { print("arch/x86/crypto/"$$0) }' > arch/x86/crypto/chacha-x86_64.mod
