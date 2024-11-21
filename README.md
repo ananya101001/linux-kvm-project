@@ -99,6 +99,7 @@ boot entail?
         3.  EXCEPTION_NMI (Exit 0) -> count : 33 exits
         
      
-    
+
+    [Assigment documentation](CMPE283 _ Virtualization_Assignment 2.pdf)
    
    
