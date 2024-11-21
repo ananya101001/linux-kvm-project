@@ -19,17 +19,17 @@ question will be recipes that someone can follow to reproduce your development s
    3. Installed neccasary tools using
         sudo apt update && sudo apt upgrade -y
         sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev git. 
-   4.Configure the Kernel
+   4. Configure the Kernel
         make menuconfig  (This opens a menu-driven interface to select options to configure )
    5. Build the Kernel
         make -j$(nproc)
         make modules_install
         make install
         mkinitramfs -o /boot/initrd.img-$(make kernelrelease)
-   6.Created Snapshot of my VM1 to safeguard against boot issues
+   6. Created Snapshot of my VM1 to safeguard against boot issues
         GCP > Compute Engine > VM instances > vm1 > Snapshots
-   7.Modify KVM Source Code to get the KVM Exits (It's likely in arch/x86/kvm/vmx/vmx.c) 
-   8.Modify the exit handler:
+   7. Modify KVM Source Code to get the KVM Exits so go to that location (It's likely in arch/x86/kvm/vmx/vmx.c)
+   8. Modify the exit handler:
         1.Add counters for each exit type
         2.Add code to print statistics every 10,000 exits
         --> printk(KERN_INFO "KVM: VMX exit occurred\n");
@@ -47,20 +47,19 @@ question will be recipes that someone can follow to reproduce your development s
                            }
                   }
            }
-
-      9.Rebuild and install the modified kernel
+   9. Rebuild and install the modified kernel
           make -j$(nproc)
           make modules_install
           make install
-      10.Update the bootloader
+   10. Update the bootloader
           update-grub
-      11.Boot the inner VM
-          sudo qemu-system-x86_64 -enable-kvm -hda debian_squeeze_amd64_standard.qcow2 -m 512 -net nic -net tap,ifname=tap0,script=no -nographic
-      12. Welcome prompt appears for inner vm
-      13. Open the new ssh terminal for vm1
-      14. go to linux directory
+   11. Boot the inner VM
+          sudo qemu-system-x86_64 -enable-kvm -hda debian_squeeze_amd64_standard.qcow2 -m 512 -net nic -net 
+   12. Welcome prompt appears for inner vm
+   13. Open the new ssh terminal for vm1
+   14. go to linux directory
           cd linux
-      15. Enter this command :- sudo dmesg | grep "KVM exit" ( below ouput shows the kVM exit counts and reason)
+   15. Enter this command :- sudo dmesg | grep "KVM exit" ( below ouput shows the kVM exit counts and reason)
           [13967.101229] KVM exit 0 (EXCEPTION_NMI): 33
           [13967.106829] KVM exit 1 (EXTERNAL_INTERRUPT): 34321
           [13967.113300] KVM exit 7 (INTERRUPT_WINDOW): 305428
@@ -73,12 +72,11 @@ question will be recipes that someone can follow to reproduce your development s
           [13967.151782] KVM exit 48 (EPT_VIOLATION): 7449
           [13967.157785] KVM exit 49 (EPT_MISCONFIG): 4806
           [13967.163634] KVM exit 54 (WBINVD): 7
-
-    16. Some of the make commands might not work in the rare case, please add sudo before commands and try it.
+   16. Some of the make commands might not work in the rare case, please add sudo before commands and try it.
    
-       
+  
 
-4. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
+3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
 more exits performed during certain VM operations? Approximately how many exits does a full VM
 boot entail?
 --> Frequency of exits:
