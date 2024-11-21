@@ -91,11 +91,14 @@ boot entail?
 
    
 4. Of the exit types, which are the most frequent? Least?
-   --> Most Frequent:
-   I/O_INSTRUCTION (Exit 30) -> Count: 1,419,909 exits
-   INTERRUPT_WINDOW (Exit 7) -> Count: 305,428 exits
-   EXTERNAL_INTERRUPT (Exit 1) -> count: 34,321 exits
-   --> Least frequent :
-   UNKNOWN (Exit 29) -> count : 1 exit
-   WBINVD (Exit 54) -> count: 7 exits
-   EXCEPTION_NMI (Exit 0) -> count : 33 exits
+   1. Most Frequent:
+      I/O_INSTRUCTION (Exit 30) -> Count: 1,419,909 exits
+      INTERRUPT_WINDOW (Exit 7) -> Count: 305,428 exits
+      EXTERNAL_INTERRUPT (Exit 1) -> count: 34,321 exits
+   2. Least frequent :
+      UNKNOWN (Exit 29) -> count : 1 exit
+      WBINVD (Exit 54) -> count: 7 exits
+      EXCEPTION_NMI (Exit 0) -> count : 33 exits
+    
+   
+   
