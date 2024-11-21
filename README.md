@@ -9,11 +9,11 @@ Questions – Provide answers in a README.md in the root of your repo.
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member
 implemented / researched. (You may skip this question if you are doing the lab by yourself).
 --> Doing it alone.
-
 2. Describe in detail the steps you used to complete the assignment. Consider your reader to be someone
 skilled in software development but otherwise unfamiliar with the assignment. Good answers to this
 question will be recipes that someone can follow to reproduce your development steps.
 --> Steps to accomplish this assignment:
+
    1. Forked the master linux Github repository at https://github.com/torvalds/linux to my githib repository.
    2. Cloned the forked repository onto my outer VM named VM1 in the GCP ssh terminal of VM1.
    3. Installed neccasary tools using
@@ -78,7 +78,7 @@ question will be recipes that someone can follow to reproduce your development s
    
        
 
-3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
+4. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
 more exits performed during certain VM operations? Approximately how many exits does a full VM
 boot entail?
 --> Frequency of exits:
