@@ -79,14 +79,12 @@ question will be recipes that someone can follow to reproduce your development s
 3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
 more exits performed during certain VM operations? Approximately how many exits does a full VM
 boot entail?
---> Frequency of exits:
+   1. --> Frequency of exits:
    I/O_INSTRUCTION (Exit 30) : this is the most frequent exit type which has occured every time i saw as VM is performing more I/O operation,and then INTERRUPT_WINDOW (Exit 7) is next highest i saw, as VM is needed to sync with the host, as VM frequently waits for interupts. External interrupts, Control register accesses for context switching, the CPUID instruction and other exits have low frequency comparing others, this is what i have seen during this assignment.
-
---> does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations?
+   2. --> does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations?
   Yes , some of the exits like INTERRUPT_WINDOW (7) and EXTERNAL_INTERRUPT (1) have stable rate because of the constant periodic hardware events like timer interrupts.
   While exits like  I/O_INSTRUCTION (30) and CPUID (10), don't have stable rate , may spike during specific VM operations like booting or handling I/O-heavy workloads. As conclusion, The number of KVM exits depends on workload and specific VM operations being performed.
-
---> Approximately how many exits does a full VM boot entail?
+   3. --> Approximately how many exits does a full VM boot entail?
   A full VM boot entails approximately 2 million KVM exits, this high number is primarily driven by I/O operations (I/O_INSTRUCTION) and interrupt handling (INTERRUPT_WINDOW), which are typical during the initialization and configuration phases of a virtual machine boot process.
 
    
