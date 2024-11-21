@@ -1,0 +1,132 @@
+diff --git a/arch/x86/kvm/vmx/vmx.c b/arch/x86/kvm/vmx/vmx.c
+index d28618e9277e..2724818b4fa2 100644
+--- a/arch/x86/kvm/vmx/vmx.c
++++ b/arch/x86/kvm/vmx/vmx.c
+@@ -73,6 +73,8 @@
+ #include "vmx_onhyperv.h"
+ #include "posted_intr.h"
+ 
++
++
+ MODULE_AUTHOR("Qumranet");
+ MODULE_DESCRIPTION("KVM support for VMX (Intel VT-x) extensions");
+ MODULE_LICENSE("GPL");
+@@ -6448,6 +6450,9 @@ void dump_vmcs(struct kvm_vcpu *vcpu)
+  * The guest has exited.  See if we can fix it or if we need userspace
+  * assistance.
+  */
++
++
++
+ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
+ {
+ 	struct vcpu_vmx *vmx = to_vmx(vcpu);
+@@ -6459,8 +6464,7 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
+ 	 * Flush logged GPAs PML buffer, this will make dirty_bitmap more
+ 	 * updated. Another good is, in kvm_vm_ioctl_get_dirty_log, before
+ 	 * querying dirty_bitmap, we only need to kick all vcpus out of guest
+-	 * mode as if vcpus is in root mode, the PML buffer must has been
+-	 * flushed already.  Note, PML is never enabled in hardware while
++	 * mode as if vcpus is in root mode, the PML buffer must has been * flushed already.  Note, PML is never enabled in hardware while
+ 	 * running L2.
+ 	 */
+ 	if (enable_pml && !is_guest_mode(vcpu))
+@@ -6627,8 +6631,51 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
+ 	return 0;
+ }
+ 
++#include <linux/atomic.h>
++
++// Global variables to count exits
++static atomic_t total_exits = ATOMIC_INIT(0);
++static atomic_t exit_counters[65] = { [0 ... 64] = ATOMIC_INIT(0) };
++
++static const char *exit_reason_str(int exit_type) {
++    switch (exit_type) {
++        case 0: return "EXCEPTION_NMI";
++        case 1: return "EXTERNAL_INTERRUPT";
++        case 2: return "TRIPLE_FAULT";
++        case 7: return "INTERRUPT_WINDOW";
++        case 10: return "CPUID";
++        case 12: return "HLT";
++        case 16: return "RDTSC";
++        case 28: return "CR_ACCESS";
++        case 30: return "I/O_INSTRUCTION";
++        case 31: return "RDMSR";
++        case 32: return "WRMSR";
++        case 48: return "EPT_VIOLATION";
++        case 49: return "EPT_MISCONFIG";
++        case 54: return "WBINVD";
++        default: return "UNKNOWN";
++    }
++}
++
+ int vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
+ {
++	printk(KERN_INFO "KVM: VMX exit occurred\n");
++	struct vcpu_vmx *vmx = to_vmx(vcpu);
++   	int exit_type = vmx->exit_reason.basic;
++	long total = atomic_inc_return(&total_exits);
++	if (exit_type < 65)
++        	atomic_inc(&exit_counters[exit_type]);
++	if (total % 10000 == 0) {
++        	int i;
++        	for (i = 0; i < 65; i++) {
++            		int count = atomic_read(&exit_counters[i]);
++            		if (count > 0) {
++                		printk(KERN_INFO "KVM exit %d (%s): %d\n", i, exit_reason_str(i), count);
++           		 }
++       		}
++   	 }	
++	
++
+ 	int ret = __vmx_handle_exit(vcpu, exit_fastpath);
+ 
+ 	/*
+diff --git a/virt/kvm/kvm_main.c b/virt/kvm/kvm_main.c
+index 6ca7a1045bbb..9bbc5fb8b393 100644
+--- a/virt/kvm/kvm_main.c
++++ b/virt/kvm/kvm_main.c
+@@ -9,6 +9,9 @@
+  *   Avi Kivity   <avi@qumranet.com>
+  *   Yaniv Kamay  <yaniv@qumranet.com>
+  */
++#define MAX_EXIT_TYPES 256
++static unsigned long exit_counters[MAX_EXIT_TYPES]={0};
++static unsigned long total_exits;
+ 
+ #include <kvm/iodev.h>
+ 
+@@ -69,6 +72,7 @@
+ 
+ /* Worst case buffer size needed for holding an integer. */
+ #define ITOA_MAX_LEN 12
++#define MAX_EXIT_TYPES 256
+ 
+ MODULE_AUTHOR("Qumranet");
+ MODULE_DESCRIPTION("Kernel-based Virtual Machine (KVM) Hypervisor");
+@@ -4474,6 +4478,24 @@ static long kvm_vcpu_ioctl(struct file *filp,
+ 		vcpu->wants_to_run = !READ_ONCE(vcpu->run->immediate_exit__unsafe);
+ 		r = kvm_arch_vcpu_ioctl_run(vcpu);
+ 		vcpu->wants_to_run = false;
++		int exit_type = vcpu->run->exit_reason;
++		printk(KERN_INFO "Hello: Exit Type %d, Count: %lu\n", exit_type, exit_counters[exit_type]);
++		if (exit_type >= 0 && exit_type < MAX_EXIT_TYPES) {
++   			 exit_counters[exit_type]++;
++		} else {
++    			printk(KERN_WARNING "Unexpected exit type: %d\n", exit_type);
++		}
++		total_exits++;
++		exit_counters[exit_type]++;
++
++		if (total_exits % 10000 == 0) {
++			printk(KERN_INFO "Exit Stats hello bhai:\n");
++			for (int i = 0; i < MAX_EXIT_TYPES; i++) {
++				if (exit_counters[i] > 0) {
++					printk(KERN_INFO "Exit Type %d: %lu exits\n", i, exit_counters[i]);
++				}
++			}
++		}
+ 
+ 		trace_kvm_userspace_exit(vcpu->run->exit_reason, r);
+ 		break;
