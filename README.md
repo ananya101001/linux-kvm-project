@@ -98,5 +98,5 @@ boot entail?
         2. WBINVD (Exit 54) -> count: 7 exits
         3.  EXCEPTION_NMI (Exit 0) -> count : 33 exits
         
-   
-   [Assigment documentation here](CMPE283%20_%20Virtualization_Assignment%202.pdf)
+Screenshots and implementation details are captured in following document
+[CMPE283 _ Virtualization_Assignment 2.pdf](CMPE283%20_%20Virtualization_Assignment%202.pdf)
